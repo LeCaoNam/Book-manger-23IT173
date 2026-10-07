@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quản lý Sách</title>
+  <style>
+    body{font-family:system-ui,sans-serif;max-width:900px;margin:0 auto;padding:1rem}
+    nav a{margin-right:1rem}
+    table{width:100%;border-collapse:collapse}
+    th,td{border:1px solid #ccc;padding:.5rem;text-align:left}
+    .ok{color:#0a7d2c}.err{color:#c0392b}
+    input{display:block;margin:.3rem 0 1rem;padding:.4rem;width:100%;max-width:360px}
+    footer{margin-top:2rem;padding-top:1rem;border-top:1px solid #ccc;color:#555;font-size:.9rem}
+  </style>
+</head>
+<body>
+  <h1>📚 Quản lý Sách</h1>
+  <nav><a href="/">Danh sách</a><a href="/add">Thêm sách</a></nav>
+  {{#if flash}}<p class="{{flash.type}}">{{flash.msg}}</p>{{/if}}
+  {{{body}}}
+  <footer>
+    {{sv.hoTen}} — MSSV: {{sv.mssv}} — VAT áp dụng: {{sv.vat}}%
+    <br><small>Session lưu trên MongoDB Atlas · số lần truy cập phiên này: {{soLanTruyCap}}</small>
+  </footer>
+</body>
+</html>

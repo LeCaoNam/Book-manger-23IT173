@@ -1,0 +1,15 @@
+<h2>Danh sách sách</h2>
+{{#if error}}<p class="err">{{error}}</p>{{/if}}
+{{#if books.length}}
+<table>
+  <tr><th>Mã SP</th><th>Tên sách</th><th>Tác giả</th><th>Giá gốc</th><th>VAT</th><th>Giá sau thuế</th></tr>
+  {{#each books}}
+  <tr>
+    <td>{{maSP}}</td><td>{{tenSach}}</td><td>{{tacGia}}</td>
+    <td>{{money gia}}</td><td>{{vat}}%</td><td>{{money giaSauThue}}</td>
+  </tr>
+  {{/each}}
+</table>
+{{else}}
+<p>Chưa có sách nào.</p>
+{{/if}}
