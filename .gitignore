@@ -1,0 +1,13 @@
+# Thông tin nhạy cảm
+.env
+.env.*
+!.env.example
+
+# Thư mục/tệp rác
+node_modules/
+npm-debug.log*
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
